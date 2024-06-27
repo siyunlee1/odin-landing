@@ -1,0 +1,219 @@
+:root {
+    --dark: #1F2937;
+    --darkish: #2C3543;
+    --whitish: #F9FAF8;
+    --gray: #E5E7EB;
+    --placeholder-color: #6C747D;
+    --blue: #3882F6
+  }
+  
+*{ /*Makes sure that initially, all elements have 0 padding, margin and borders, initialisation*/
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: roboto;
+}
+
+p{
+    font-size: 16px;
+    color: var(--gray);
+}
+
+
+
+
+
+
+
+/* NAVBAR*/
+
+
+.navbar {
+    display: flex; /*makes navbar a flexbox, to better structure*/
+    background-color: var(--dark) ;
+    padding: 10px 200px 10px 200px; /*sets vertical and horizontol padding*/
+}
+
+
+.logo { /*Header logo for the website*/
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--whitish);
+}
+
+.link-wrapper { /*Flexbox for the header links*/
+    display: flex;
+    /* display: flex; */
+    width: 400px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+
+.link { /*each link div is a flexbox to center elements*/
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+/*about*/
+.about { /*Set basic structure of the about section*/
+    display: flex;
+    gap: 80px; /*Sets gap between flexitems (description and placeholder)*/
+    background-color: var(--dark);
+    padding: 130px 200px 130px 200px;
+}
+.description { /*Description is a flex item that takes up the same amount of space as placeholder*/
+    flex: 1;
+}
+.lengthy-desc {
+    margin-bottom: 12px;
+}
+.placeholder {
+    display: flex; /*Set to flex to center element within*/
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: var(--placeholder-color);
+}
+h1 {
+    font-size: 48px;
+    color: var(--whitish);
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.sign-up-button {
+    display: flex; /*set as flex to line elements within it*/
+    justify-content: center;
+    align-items: center; /*Centers the text*/
+    background-color: var(--blue);
+    color: white;
+    font-size: 18px;
+    width: 120px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*info*/
+.info { /*initialising basic info for the info section*/
+    background-color: white;
+    padding: 60px 300px 60px 300px;
+}
+h2 {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--dark);
+    text-align: center;
+    margin-bottom: 60px;
+}
+.container {
+    display: flex; /*turns container with the boxes and text into a flexbox*/
+    flex-direction: row;
+    justify-content: space-between; /*makes sure the child elements are distirbuted evenly*/
+}
+.item {
+    width: 160px;
+}
+
+.item p {
+    color: var(--placeholder-color);
+    text-align: center;
+}
+.box{
+    border-color: var(--blue);
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 12px;
+    width: 160px;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+/*Quote*/
+.quote {
+    background-color: var(--gray);
+    padding: 130px 300px 130px 300px;
+}
+
+h3 {
+    font-size: 36px;
+    font-weight: 250;
+    color: var(--darkish);
+    margin-bottom: 12px;
+}
+h4 {
+    font-size: 22px;
+    color: var(--dark);
+    text-align: end;
+}
+
+
+
+
+
+
+/*signup*/
+.sign-up{
+    display: flex;
+    background-color: white;
+    padding: 80px 200px 80px 200px;
+}
+.sign-up-right, .sign-up-left {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: var(--blue);
+}
+
+.sign-up-left {
+    flex: 2;
+    padding-left: 150px;
+    /* padding-right: 120px; */
+}
+
+.sign-up-right{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 1;
+    padding-right: 150px;
+}
+
+
+h5{
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.sign-up-right > .sign-up-button {
+    padding: 10px;
+    border: 1px solid white;
+}
+
+/*footer*/
+.footnote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: var(--dark);
+}
